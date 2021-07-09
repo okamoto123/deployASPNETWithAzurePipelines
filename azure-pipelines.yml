@@ -69,11 +69,11 @@ stages:
           
 - stage: DeployASPNETApp
   jobs:
-    - job: DeployASPNETApp
-      pool:
-        vmImage: 'windows-latest'
-      steps:
-      
+  - job: DeployASPNETApp
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+
     - task: DownloadBuildArtifacts@1
       inputs:
         buildType: 'current'
